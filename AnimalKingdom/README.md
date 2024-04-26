@@ -1,10 +1,18 @@
 ```mermaid
     classDiagram
-        Program "1" *-- "*" Character
-        Character <|-- Player
-        Character <|-- Enemy
-        Player "1" o-- "*" Weapon
-        Enemy "1" o-- "*" Weapon
-        Weapon <|-- Gun
-        Weapon <|-- Sword
+        Bat --|> Animal
+        Bat ..|> IMammal
+        Bat ..|> ICanFly
+        Dog --|> Animal
+        Dog ..|> IMammal
+        Cat --|> Animal
+        Cat ..|> IMammal
+        Bee --|> Animal
+        Bee ..|> ICanFly
+
+        class IMammal
+        <<interface>> IMammal
+
+        class ICanFly
+        <<interface>> ICanFly
 ```
